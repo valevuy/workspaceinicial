@@ -31,12 +31,10 @@ function showProductsList(){
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){ /*funcion anonima*/
-    showSpinner();
     getJSONData(PRODUCTS_URL).then(function(resultObj){  /*lo tengo que procesar con un then porque lo que me devuleve un then es una promisse que se tiene que trabajar dentro de un then. Nunca salgo de la cadena de then . Se nombra el paquete que se recibe con una funcion anomima*/
         if (resultObj.status === "ok"){
-        
-            showProductsList(productsArray, resultObj.data); /* muestra los elementos de la lista */
+        showProductsList(productsArray, resultObj.data); /* muestra los elementos de la lista */
         }
-        hideSpinner();
+       
     });
 });
