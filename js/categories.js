@@ -37,15 +37,15 @@ function sortCategories(criteria, array){
 
 function showCategoriesList(){
 
-    let htmlContentToAppend = "";
-    for(let i = 0; i < currentCategoriesArray.length; i++){
-        let category = currentCategoriesArray[i];
+    let htmlContentToAppend = ""; //define como texto vacio
+    for(let i = 0; i < currentCategoriesArray.length; i++){ //empieza a rrecorrer lista y es lo que se muestra en html
+        let category = currentCategoriesArray[i]; 
 
         if (((minCount == undefined) || (minCount != undefined && parseInt(category.productCount) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
+            ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount)  <= maxCount))){ //filtros  (para mostrar o no)
 
             htmlContentToAppend += `
-            <a href="category-info.html" class="list-group-item list-group-item-action">
+            <a href="category-info.html" class="list-group-item list-group-item-action">  
                 <div class="row">
                     <div class="col-3">
                         <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
@@ -59,10 +59,11 @@ function showCategoriesList(){
                     </div>
                 </div>
             </a>
-            `
+            ` //<a> </a> es para que en link sea todo clickeable. clase de boostrap. SE Puede utilizar la misma estructura para por eje productos
+            
         }
 
-        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
+        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend; //
     }
 }
 
