@@ -23,7 +23,7 @@ function showProductsList(){
         </a>
         ` //<a> </a> es para que en link sea todo clickeable. clase de boostrap. SE Puede utilizar la misma estructura para por eje productos
         
-        document.getElementById("cat-list-container").innerHTML = htmlContentToAppend; 
+        document.getElementById("pro-list-container").innerHTML = htmlContentToAppend; 
     }
 }
 
