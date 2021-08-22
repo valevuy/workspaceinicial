@@ -1,5 +1,5 @@
 html,body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-color: aqua;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -22,7 +22,7 @@ html,body{
     .social_icon span{
     font-size: 60px;
     margin-left: 10px;
-    color: #FFC312;
+    color: #fbff12ce;
     }
     
     .social_icon span:hover{
@@ -42,7 +42,7 @@ html,body{
     
     .input-group-prepend span{
     width: 50px;
-    background-color: #FFC312;
+    background-color: #1aff12;
     color: black;
     border:0 !important;
     }
@@ -67,7 +67,7 @@ html,body{
     
     .login_btn{
     color: black;
-    background-color: #FFC312;
+    background-color: #3612ff;
     width: 100px;
     }
     
