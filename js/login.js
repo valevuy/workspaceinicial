@@ -1,8 +1,11 @@
 function validar(){
-    let usuario = document.getElementById("usuario").value;
+    let nombre = document.getElementById("nombre").value;
     let pass = document.getElementById("pass").value;
-    if((usuario!=="")&& (pass!=="")){
-        window.location.href= "./home.html";
+    if((nombre !== "") && (pass!=="")){
+      let myStorage = window.localStorage;
+      myStorage.setItem('usuario',nombre);
+     
+      window.location.href= "./home.html";
     }
     else{
         alert("debe completar los campos");
